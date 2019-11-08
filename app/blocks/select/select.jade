@@ -1,0 +1,18 @@
+mixin select(label, name, options) 
+    if label
+        .default-label #{label}  
+        select(
+            id="#{name}"
+            name="#{name}"
+            ).default-select
+            -for(var i = 1;i<5;i++){
+                option(value="#{i}") #{options}#{i}
+            -}
+    else
+        select(
+            id="#{name}" 
+            name="#{name}"
+            ).default-select
+            -for(var i = 1;i<5;i++){
+                option(value="#{i}") #{options}#{i}
+            -}       

@@ -1,0 +1,49 @@
+include ../inputText/inputText   
+include ../inputRadio/inputRadio  
+include ../select/select 
+include ../buttonSubmit/buttonSubmit   
+
+mixin singUpForm()
+    +b('form').sing-up-content(action="get")
+        .sing-up-content__main
+            .sing-up-content__main-title
+                | New user? 
+            .sing-up-content__main-description
+                | Use the form below to create your account.
+            .sing-up-content__main-form-list 
+                .sing-up-content__main-item
+                    +inputText("First Name", "firstNname", "Alice", "text", false)
+                .sing-up-content__main-item
+                    +inputText("Last Name", "lastNname" , "Miller", "text", false)
+                .sing-up-content__main-item                 
+                    +select("Nationality", "nationality", "American")
+                .sing-up-content__main-item
+                    +inputText("E-mail", "email" , "alice.miller@yahoo.com", "email", true)
+                .sing-up-content__main-item
+                    .default-label
+                        | Date of Birth
+                    .sing-up-content__main-item-list
+                        .sing-up-content__main-item-list-item.fg-1
+                            +select(false, "dayBirth")
+                        .sing-up-content__main-item-list-item.fg-1
+                            +select(false, "monthBirth", "December")                            
+                        .sing-up-content__main-item-list-item.fg-1
+                            +select(false, "yearBirth", "199")
+                .sing-up-content__main-item
+                    .default-label
+                        | Gender
+                    .sing-up-content__main-item-list
+                        .sing-up-content__main-item-list-item.mr-10
+                            +inputRadio("Male", "gender", "Male", false) 
+                        .sing-up-content__main-item-list-item.mr-10
+                            +inputRadio("Female", "gender", "Female", true)
+                .sing-up-content__main-item
+                    +inputText("Password", "password", "", "text", false)
+                .sing-up-content__main-item 
+                    +inputText("ConfirmPassword", "confirmPassword", "", "text", false)					
+        .sing-up-content__footer
+            .sing-up-content__footer-text
+                | Have an account? 
+                a(href="#")
+                    | Login
+            +buttonSubmit("Complete Signup")            

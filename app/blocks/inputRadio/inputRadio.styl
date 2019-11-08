@@ -1,0 +1,33 @@
+.default-radio
+    cursor pointer
+    font-size 14px
+    line-height 16px
+    color #111111
+    position relative
+    padding 5px 0 6px 18px
+    display block
+    &__input
+        opacity 0
+        width 0
+        height 0
+        &:checked
+            & ~ .default-radio__dot::after
+                content ''
+                width 6px
+                height 6px
+                border-radius 3px
+                background #5A61ED
+                position absolute
+                left 50%
+                top 50%
+                transform translate(-50%,-50%)              
+
+    &__dot
+        width 12px
+        height 12px
+        border 0.7px solid #5A61ED
+        border-radius 6.3px
+        position absolute
+        left 0
+        top 50%
+        transform translateY(-50%)

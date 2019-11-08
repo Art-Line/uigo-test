@@ -1,0 +1,15 @@
+mixin inputText(label, name, value, type, confirm)  
+    if confirm  
+        .default-label #{label}
+        input(
+            type="#{type}"
+            name="#{name}"
+            value="#{value}"
+        ).default-input-text.default-input-text_validate
+    else
+        .default-label #{label}
+        input(
+            type="#{type}" 
+            name="#{name}" 
+            value="#{value}"
+        ).default-input-text

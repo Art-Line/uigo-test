@@ -1,0 +1,18 @@
+mixin inputRadio(label, name, value, checked)    
+    if checked
+        label.default-radio #{label}
+            input(
+                type="radio"
+                name="#{name}"
+                value="#{value}"
+                checked
+            ).default-radio__input
+            span.default-radio__dot
+    else
+        label.default-radio #{label}
+            input(
+                type="radio" 
+                name="#{name}"
+                value="#{value}"
+            ).default-radio__input
+            span.default-radio__dot    

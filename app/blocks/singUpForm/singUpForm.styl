@@ -1,0 +1,59 @@
+.sing-up-content
+    display flex
+    flex-direction column
+    justify-content space-between
+    width calc(100% - 138px)
+    padding 22+16px 21px 28px
+    background: url('../images/sing-up-bg.svg');
+    background-position right bottom
+    background-repeat no-repeat
+    @media (max-width:600px)
+        width 100%        
+    &__main
+        flex: 1 0 auto
+        &-title
+            font-weight 500
+            font-size 22px
+            line-height 26px
+            letter-spacing -0.46px
+            color #111
+        &-description
+            font-weight 300
+            font-size 14px
+            line-height 16px
+            color #111  
+            padding-bottom 20px
+        &-form-list
+            display flex
+            flex-wrap wrap 
+            margin 0 -7px               
+        &-item
+            flex-basis 50%
+            margin-bottom 16px
+            padding 0 7px
+            @media (max-width:480px)
+                flex-basis 100%                
+            &-list
+                display flex
+                margin 0 -5px
+                &-item
+                    padding 0 5px
+
+    &__footer
+        flex 0 0 auto
+        display flex
+        flex-wrap: wrap
+        justify-content space-between
+        align-items center
+        &-text
+            font-weight 300
+            font-size 13px
+            line-height 15px
+            color #000
+            padding 10px 10px 15px 0
+            a
+                color #5A61ED
+                font-weight 400
+                &:hover
+                    text-decoration none
+
